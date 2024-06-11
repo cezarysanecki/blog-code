@@ -21,7 +21,7 @@ class InMemoryCustomerRepository implements CustomerRepository {
 
   @Override
   public Optional<Customer> findById(Long id) {
-    return Optional.of(DATABASE.get(id));
+    return Optional.ofNullable(DATABASE.get(id));
   }
 
   @Override
