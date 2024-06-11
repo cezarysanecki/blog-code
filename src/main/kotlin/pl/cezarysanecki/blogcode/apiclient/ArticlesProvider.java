@@ -18,6 +18,7 @@ class ArticlesProvider {
   ArticleSearchResponse searchArticles(ArticleSearchRequest request) {
     UriComponents uriComponents = UriComponentsBuilder.newInstance()
         .uri(URI.create(baseUrl))
+        .path("articles")
         .queryParam("limit", request.limit)
         .queryParam("title_contains", request.titleSubstring)
         .build();

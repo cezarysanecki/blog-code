@@ -2,6 +2,7 @@ package pl.cezarysanecki.blogcode.apiclient.test;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 import pl.cezarysanecki.blogcode.apiclient.SpaceflightNewsApi;
 import pl.cezarysanecki.blogcode.apiclient.api.ArticleSearchRequest;
 import pl.cezarysanecki.blogcode.apiclient.api.ArticleSearchResponse;
