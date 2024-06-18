@@ -15,17 +15,17 @@ import java.util.List;
 
 @Configuration
 @RequiredArgsConstructor
-class SpaceflightNewsConfig {
+class SpaceflightNewsWithFeignConfig {
 
   @Bean
-  SpaceflightNewsApi spaceflightNewsApi(@Value("${api-client.spaceflight-news-base-url}") String baseUrl) {
+  SpaceflightNewsWithFeignApi spaceflightNewsWithFeignApi(@Value("${api-client.spaceflight-news-base-url}") String baseUrl) {
     ArticlesProvider articlesProvider = Feign.builder()
         .encoder(new JacksonEncoder(List.of(new JavaTimeModule())))
         .decoder(new JacksonDecoder(List.of(new JavaTimeModule())))
         .logger(new Slf4jLogger(ArticlesProvider.class))
         .logLevel(Logger.Level.FULL)
         .target(ArticlesProvider.class, baseUrl);
-    return new SpaceflightNewsApi(articlesProvider);
+    return new SpaceflightNewsWithFeignApi(articlesProvider);
   }
 
 }

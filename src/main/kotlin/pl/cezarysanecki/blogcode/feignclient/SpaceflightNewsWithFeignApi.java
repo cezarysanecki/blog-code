@@ -7,7 +7,7 @@ import pl.cezarysanecki.blogcode.feignclient.api.ArticleSearchResponse;
 
 @Slf4j
 @RequiredArgsConstructor
-public class SpaceflightNewsApi {
+public class SpaceflightNewsWithFeignApi {
 
   private final ArticlesProvider articlesProvider;
 
