@@ -10,7 +10,7 @@ import pl.cezarysanecki.blogcode.apiclient.api.ArticleSearchResponse;
 import java.net.URI;
 
 @RequiredArgsConstructor
-class ArticleProvider {
+class ArticleRestTemplateProvider {
 
   private final RestTemplate restTemplate;
   private final String baseUrl;
